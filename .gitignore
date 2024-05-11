@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/x64
+/ExpenseManager/ExpenseManager/x64/Release/ExpenseManager.ipdb
+/ExpenseManager/ExpenseManager/x64/Release/ExpenseManager.iobj
+/ExpenseManager/ExpenseManager/x64/Release/ExpenseManager.Build.CppClean.log

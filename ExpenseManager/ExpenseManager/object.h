@@ -58,13 +58,3 @@ public:
 private:
 
 };
-
-class Manager
-{
-public:
-	Manager() {};
-	~Manager() {};
-
-private:
-
-};

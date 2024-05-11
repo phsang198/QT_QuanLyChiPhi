@@ -47,7 +47,7 @@ CModel::~CModel()
 	if (db) sqlite3_close(db);
 }
 
-bool CModel::add(object* obj)
+bool CModel::add(std::shared_ptr<object> obj)
 {
 	std::string query = "";
 	if (obj->type == OBJECT_TYPE::EXPENSE)
@@ -86,7 +86,7 @@ bool CModel::add(object* obj)
 	return true;
 }
 
-bool CModel::update(object* obj)
+bool CModel::update(std::shared_ptr<object> obj)
 {
 	std::string query = "";
 	if (obj->type == OBJECT_TYPE::EXPENSE)
@@ -135,11 +135,11 @@ bool CModel::update(object* obj)
 	return true;
 }
 
-bool CModel::del(object* obj)
+bool CModel::del(object obj)
 {
 	std::string query = R"(DELETE FROM $rsc 
 							WHERE ID = $id;)";
-	if (obj->type == OBJECT_TYPE::EXPENSE)
+	if (obj.type == OBJECT_TYPE::EXPENSE)
 	{
 		StringProcess::ReplaceAll(query, "$rsc", "Expense");
 	}
@@ -147,7 +147,7 @@ bool CModel::del(object* obj)
 	{
 		StringProcess::ReplaceAll(query, "$rsc", "User");
 	}
-	StringProcess::ReplaceAll(query, "$id", obj->id);
+	StringProcess::ReplaceAll(query, "$id", obj.id);
 
 	int rc = sqlite3_exec(db, query.c_str(), 0, 0, 0);
 
@@ -158,6 +158,7 @@ bool CModel::del(object* obj)
 	}
 	return true;
 }
+
 bool CModel::getUser(user& _user)
 {
 	std::string query = "SELECT * FROM User WHERE ID = $id";

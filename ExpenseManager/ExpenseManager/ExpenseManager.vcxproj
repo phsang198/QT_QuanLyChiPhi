@@ -116,8 +116,8 @@
       <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration)\share\ /E
-copy $(SolutionDir)Lib\sqlite3\debug\bin\*.* $(SolutionDir)$(Platform)\$(Configuration)\*.*</Command>
+      <Command>xcopy $(SolutionDir)Lib\sqlite3\debug\bin\ $(OutDir)
+xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration)\share\ /E/Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,21 +139,24 @@ copy $(SolutionDir)Lib\sqlite3\debug\bin\*.* $(SolutionDir)$(Platform)\$(Configu
       <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration)\share\ /E
-copy $(SolutionDir)Lib\sqlite3\bin\*.* $(SolutionDir)$(Platform)\$(Configuration)\*.*</Command>
+      <Command>xcopy $(SolutionDir)Lib\sqlite3\bin\ $(OutDir)
+xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration)\share\ /E/Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Control.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="object.h" />
+    <ClInclude Include="objectManager.h" />
     <ClInclude Include="StringProcess.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Control.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="object.cpp" />
+    <ClCompile Include="objectManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

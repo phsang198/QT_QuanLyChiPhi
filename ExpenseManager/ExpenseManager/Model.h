@@ -17,9 +17,9 @@ public:
 public:
 	static sqlite3* db;
 public:
-	bool add(object* ) ;
-	bool update(object*) ;
-	bool del(object*);
+	bool add(std::shared_ptr<object> ) ;
+	bool update(std::shared_ptr<object>) ;
+	bool del(object);
 public:
 	bool getUser(user&);
 	bool getlistExpense(std::vector<std::shared_ptr<expense>>&);
