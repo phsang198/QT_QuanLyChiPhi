@@ -10,7 +10,10 @@
 #include <codecvt>
 #include <algorithm>
 #include <vector>
+#include <Windows.h>
+#include <chrono>
 
+#define RUN_PROJECT "ExpenseManager.exe"
 class StringProcess
 {
 public:
@@ -19,6 +22,53 @@ public:
 	//	CT2CA pszConvertedAnsiString(cstr);
 	//	return std::string(pszConvertedAnsiString);
 	//}
+
+	static int compareDates(const std::string& date1, const std::string& date2) {
+		std::tm tm1 = {};
+		std::tm tm2 = {};
+
+		std::istringstream iss1(date1);
+		std::istringstream iss2(date2);
+
+		iss1 >> std::get_time(&tm1, "%Y-%m-%d");
+		iss2 >> std::get_time(&tm2, "%Y-%m-%d");
+
+		auto time_point1 = std::chrono::system_clock::from_time_t(std::mktime(&tm1));
+		auto time_point2 = std::chrono::system_clock::from_time_t(std::mktime(&tm2));
+
+		if (time_point1 < time_point2)
+			return -1;
+		else if (time_point1 > time_point2)
+			return 1;
+		else
+			return 0;
+	}
+	static bool readFileConfig(std::string path, std::string& content)
+	{
+		std::ifstream f;
+		f.open(path, std::ios::in);
+		std::string tmp;
+		if (f.fail())
+		{
+			return FALSE;
+		}
+		while (std::getline(f, tmp)) {
+			content += (tmp + '\n');
+		}
+		f.close();
+		return TRUE;
+	}
+	static std::string getExePath()
+	{
+		char curPath[FILENAME_MAX];
+		GetModuleFileNameA(NULL, curPath, sizeof(curPath));
+		std::string szCurDir(curPath);
+
+		size_t found = szCurDir.find(RUN_PROJECT);
+		szCurDir.erase(found, szCurDir.length() - 1);
+		return szCurDir;
+	}
+
 	static std::string ws2string(std::wstring ws)
 	{
 		std::string s(ws.begin(), ws.end());

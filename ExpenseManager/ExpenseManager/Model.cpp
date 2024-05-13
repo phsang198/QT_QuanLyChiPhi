@@ -4,7 +4,8 @@
 sqlite3* CModel::db;
 CModel::CModel()
 {
-	int rc = sqlite3_open("expense.db", &db); 
+	std::string db_path = StringProcess::getExePath() + "Res/db/data.db"; 
+	int rc = sqlite3_open(db_path.c_str(), &db);
 
 	if (rc) {
 		std::cout << "Can not open db!" << sqlite3_errmsg(db) << std::endl;
@@ -25,13 +26,14 @@ CModel::CModel()
 			std::cout << "Table init error: " << sqlite3_errmsg(db) << std::endl;
 			sqlite3_close(db);
 		}
-		const char* sql2 = R"(CREATE TABLE IF NOT EXISTS User (
-			ID INTEGER PRIMARY KEY AUTOINCREMENT,
-			fullname TEXT NOT NULL,
-			username TEXT NOT NULL UNIQUE,
-			password TEXT NOT NULL,
-			position TEXT NOT NULL
-			); )";
+		const char* sql2 = R"(CREATE TABLE IF NOT EXISTS Expense (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			date DATE NOT NULL,
+			category TEXT NOT NULL,
+			subcategory TEXT,
+			amount REAL NOT NULL,
+			balance REAL NOT NULL
+		); )";
 
 		rc = sqlite3_exec(db, sql2, 0, 0, 0);
 

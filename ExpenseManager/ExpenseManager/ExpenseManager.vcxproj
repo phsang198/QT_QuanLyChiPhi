@@ -107,7 +107,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Lib\sqlite3\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\sqlite3\include;$(SolutionDir)Lib\nlohmann</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,6 +117,7 @@
     </Link>
     <PostBuildEvent>
       <Command>xcopy $(SolutionDir)Lib\sqlite3\debug\bin\ $(OutDir)
+xcopy $(SolutionDir)Res\ $(OutDir)Res\ /E/Y
 xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration)\share\ /E/Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -128,7 +129,7 @@ xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Lib\sqlite3\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\sqlite3\include;$(SolutionDir)Lib\nlohmann</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,6 +141,7 @@ xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration
     </Link>
     <PostBuildEvent>
       <Command>xcopy $(SolutionDir)Lib\sqlite3\bin\ $(OutDir)
+xcopy $(SolutionDir)Res\ $(OutDir)Res\ /E/Y
 xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration)\share\ /E/Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

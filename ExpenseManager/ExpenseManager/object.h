@@ -49,7 +49,7 @@ public:
 	expense(std::string, std::string, std::string, double, double, int = 0);
 	~expense() {};
 public:
-	std::string date;
+	std::string date;						// format 'YYYY-MM-DD'
 	std::string category;
 	std::string subcategory;
 	double amount;
