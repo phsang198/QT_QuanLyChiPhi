@@ -22,7 +22,24 @@ public:
 	//	CT2CA pszConvertedAnsiString(cstr);
 	//	return std::string(pszConvertedAnsiString);
 	//}
-
+	template <class T> 
+	static bool compare(const std::shared_ptr<T>& e1, const std::shared_ptr<T>& e2) {
+		if (e1->date != e2->date) {
+			return compareDates(e1->date, e2->date);
+		}
+		else if (e1->category != e2->category)
+		{
+			return e1->category < e2->category;
+		}
+		else {
+			return e1->subcategory < e2->subcategory;
+		}
+	}
+	template <class T> 
+	static void Sort( std::vector<std::shared_ptr<T>> arr)
+	{
+		std::sort(arr.begin(), arr.end(), compare<T>);
+	}
 	static int compareDates(const std::string& date1, const std::string& date2) {
 		std::tm tm1 = {};
 		std::tm tm2 = {};

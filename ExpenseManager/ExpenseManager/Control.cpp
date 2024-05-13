@@ -1,11 +1,13 @@
 #include "Control.h"
 #include "objectManager.h"
+#include "StringProcess.h"
 
 CModel Controller::model;
 
 void Controller::getListExpense()
 {
 	model.getlistExpense(ObjectManager::lst_expense);
+	StringProcess::Sort(ObjectManager::lst_expense);
 }
 
 void Controller::getUser(std::string username, std::string password, std::string& msg)
