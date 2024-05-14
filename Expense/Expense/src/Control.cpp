@@ -22,6 +22,10 @@ void Controller::add(std::shared_ptr<object> obj)
 	bool res = model.add(obj);
 	if (obj->type == EXPENSE && res)
 		getListExpense(); 
+	else
+	{
+
+	}
 }
 
 void Controller::update(std::shared_ptr<object> obj)

@@ -63,7 +63,6 @@ bool CModel::add(std::shared_ptr<object> obj)
 		StringProcess::ReplaceAll(query, "$subcategory", _exp.subcategory);
 		StringProcess::ReplaceAll(query, "$amount", StringProcess::to_string_with_precision(_exp.amount));
 		StringProcess::ReplaceAll(query, "$balance", StringProcess::to_string_with_precision(_exp.balance));
-
 	}
 	else
 	{

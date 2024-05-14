@@ -120,6 +120,10 @@ xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Aboutme.cpp" />
+    <ClCompile Include="Login.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Register.cpp" />
     <ClCompile Include="src\Control.cpp" />
     <ClCompile Include="src\Model.cpp" />
     <ClCompile Include="src\object.cpp" />

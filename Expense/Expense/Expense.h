@@ -19,6 +19,7 @@ private slots:
     void on_forget_pass_clicked();
     //-------------------------------register------------------------------//
     void on_register_clicked();
+    void regiter_clear();
     //-------------------------------forget password------------------------------//
     void on_change_pass_clicked();
     //-------------------------------update user------------------------------//
