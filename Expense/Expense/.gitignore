@@ -3,7 +3,6 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=c++
 
 # Visual C++ cache files
-x64/
 ipch/
 *.aps
 *.ncb
@@ -17,6 +16,7 @@ ipch/
 ### C++ ###
 #folder
 .vs/
+x64/
 *.pdb
 
 # Prerequisites

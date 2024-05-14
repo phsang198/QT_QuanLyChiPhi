@@ -3,6 +3,7 @@
 #include <regex>
 
 #include <sstream>
+#include <iomanip>
 #include <iostream>
 #include <cstring>
 #include <fstream>
@@ -13,7 +14,7 @@
 #include <Windows.h>
 #include <chrono>
 
-#define RUN_PROJECT "ExpenseManager.exe"
+#define RUN_PROJECT "Expense.exe"
 class StringProcess
 {
 public:
