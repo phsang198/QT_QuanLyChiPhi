@@ -32,19 +32,6 @@
     <attribute name="title">
      <string/>
     </attribute>
-    <widget class="QLabel" name="signup">
-     <property name="geometry">
-      <rect>
-       <x>800</x>
-       <y>60</y>
-       <width>161</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>YOU HAVE NO ACCOUNT ?</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="username">
      <property name="geometry">
       <rect>
@@ -88,19 +75,6 @@
      </property>
      <property name="placeholderText">
       <string>PASSWORD</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="signup_2">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>390</y>
-       <width>161</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>FORGET PASSWORD?</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_9">
@@ -184,13 +158,37 @@ color:rgb(255, 0, 0)</string>
      <property name="title">
       <string/>
      </property>
+     <widget class="QPushButton" name="no_account_btn">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>50</y>
+        <width>151</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>YOU HAVE NO ACCOUNT ?</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="forget_pass_btn">
+      <property name="geometry">
+       <rect>
+        <x>484</x>
+        <y>374</y>
+        <width>121</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>FORGET PASSWORD?</string>
+      </property>
+     </widget>
     </widget>
     <zorder>groupBox_3</zorder>
-    <zorder>signup</zorder>
     <zorder>username</zorder>
     <zorder>login</zorder>
     <zorder>password</zorder>
-    <zorder>signup_2</zorder>
     <zorder>label_9</zorder>
     <zorder>label_20</zorder>
     <zorder>label_21</zorder>
@@ -225,7 +223,7 @@ color:rgb(255, 0, 0)</string>
       <string>NEW PASSWORD</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="login_2">
+    <widget class="QPushButton" name="change">
      <property name="geometry">
       <rect>
        <x>463</x>
@@ -235,7 +233,7 @@ color:rgb(255, 0, 0)</string>
       </rect>
      </property>
      <property name="text">
-      <string>LOGIN</string>
+      <string>CHANGE</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="confirm_new_password">
@@ -358,12 +356,21 @@ color:rgb(255, 0, 0)</string>
       <string/>
      </property>
     </widget>
+    <zorder>groupBox_4</zorder>
+    <zorder>fusername</zorder>
+    <zorder>newpass</zorder>
+    <zorder>change</zorder>
+    <zorder>confirm_new_password</zorder>
+    <zorder>label_10</zorder>
+    <zorder>label_17</zorder>
+    <zorder>label_18</zorder>
+    <zorder>label_19</zorder>
    </widget>
    <widget class="QWidget" name="registerpage">
     <attribute name="title">
      <string>Tab 2</string>
     </attribute>
-    <widget class="QLineEdit" name="password_2">
+    <widget class="QLineEdit" name="password_re">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -376,7 +383,7 @@ color:rgb(255, 0, 0)</string>
       <string>PASSWORD</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="register_2">
+    <widget class="QPushButton" name="register_btn">
      <property name="geometry">
       <rect>
        <x>455</x>
@@ -389,7 +396,7 @@ color:rgb(255, 0, 0)</string>
       <string>REGISTER</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="role">
+    <widget class="QComboBox" name="role_re">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -431,7 +438,7 @@ color:rgb(255, 0, 0)</string>
       </property>
      </item>
     </widget>
-    <widget class="QLineEdit" name="username_2">
+    <widget class="QLineEdit" name="username_re">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -444,7 +451,7 @@ color:rgb(255, 0, 0)</string>
       <string>USERNAME</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="confirm_password">
+    <widget class="QLineEdit" name="confirm_password_re">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -476,7 +483,7 @@ color:rgb(255, 0, 0)</string>
       <string>REGISTER</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="fullname">
+    <widget class="QLineEdit" name="fullname_re">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -627,12 +634,25 @@ color:rgb(255, 0, 0)</string>
       <string/>
      </property>
     </widget>
+    <zorder>groupBox_5</zorder>
+    <zorder>password_re</zorder>
+    <zorder>register_btn</zorder>
+    <zorder>role_re</zorder>
+    <zorder>username_re</zorder>
+    <zorder>confirm_password_re</zorder>
+    <zorder>label_11</zorder>
+    <zorder>fullname_re</zorder>
+    <zorder>label_12</zorder>
+    <zorder>label_13</zorder>
+    <zorder>label_14</zorder>
+    <zorder>label_15</zorder>
+    <zorder>label_16</zorder>
    </widget>
    <widget class="QWidget" name="userpage">
     <attribute name="title">
      <string>Page</string>
     </attribute>
-    <widget class="QLineEdit" name="username_3">
+    <widget class="QLineEdit" name="username_up">
      <property name="geometry">
       <rect>
        <x>398</x>
@@ -645,7 +665,7 @@ color:rgb(255, 0, 0)</string>
       <string>USERNAME</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="role_2">
+    <widget class="QComboBox" name="role_up">
      <property name="geometry">
       <rect>
        <x>399</x>
@@ -690,7 +710,7 @@ color:rgb(255, 0, 0)</string>
       </property>
      </item>
     </widget>
-    <widget class="QPushButton" name="update_user">
+    <widget class="QPushButton" name="update_btn">
      <property name="geometry">
       <rect>
        <x>450</x>
@@ -708,7 +728,7 @@ color:rgb(255, 0, 0)</string>
       <string>UPDATE</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="fullname_2">
+    <widget class="QLineEdit" name="fullname_up">
      <property name="geometry">
       <rect>
        <x>398</x>
@@ -747,6 +767,12 @@ color:rgb(255, 0, 0)</string>
       <string/>
      </property>
     </widget>
+    <zorder>groupBox_6</zorder>
+    <zorder>username_up</zorder>
+    <zorder>role_up</zorder>
+    <zorder>update_btn</zorder>
+    <zorder>fullname_up</zorder>
+    <zorder>logout</zorder>
    </widget>
    <widget class="QWidget" name="adminpage">
     <attribute name="title">
@@ -991,7 +1017,7 @@ p, li { white-space: pre-wrap; }
        <string>Date</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="addexp">
+     <widget class="QPushButton" name="add">
       <property name="geometry">
        <rect>
         <x>843</x>
@@ -1170,7 +1196,7 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="pilot">
+    <widget class="QPushButton" name="export_btn">
      <property name="geometry">
       <rect>
        <x>901</x>
@@ -1183,7 +1209,7 @@ p, li { white-space: pre-wrap; }
       <string>EXPORT</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="about_me2">
+    <widget class="QPushButton" name="about_me_ex">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -1199,8 +1225,8 @@ p, li { white-space: pre-wrap; }
     <zorder>groupBox</zorder>
     <zorder>tableView</zorder>
     <zorder>groupBox_2</zorder>
-    <zorder>pilot</zorder>
-    <zorder>about_me2</zorder>
+    <zorder>export_btn</zorder>
+    <zorder>about_me_ex</zorder>
    </widget>
   </widget>
  </widget>
