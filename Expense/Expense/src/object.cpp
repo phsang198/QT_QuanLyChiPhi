@@ -16,16 +16,11 @@ user::user(std::string _username, std::string _password, std::string _fullname, 
 	id		 = _id; 
 }
 
-std::string date;
-std::string category;
-std::string subcategory;
-double amount;
-double balance;
-int id;
-expense::expense(std::string _date, std::string _category, std::string _subcategory, double _amount, double _balance, int _id)
+expense::expense(int _userID, std::string _date, std::string _category, std::string _subcategory, double _amount, double _balance, int _id)
 {
 	type = EXPENSE;
 	date = _date; 
+	userID = _userID;
 	category = _category;
 	subcategory = _subcategory;
 	amount = _amount;

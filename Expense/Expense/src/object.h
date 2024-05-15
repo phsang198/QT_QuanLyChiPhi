@@ -1,11 +1,16 @@
 #pragma once
 #include <string>
 
+
+
 enum OBJECT_TYPE
 {
 	USER,
 	EXPENSE
 };
+// Class: object
+// Description: [Define project objects].
+
 class object
 {
 public:
@@ -24,7 +29,8 @@ public:
 private:
 
 };
-
+// Class: user
+// Description: [Define user].
 class user : public object
 {
 public:
@@ -41,12 +47,13 @@ public:
 private:
 
 };
-
+// Class: expense
+// Description: [Define expense].
 class expense : public object
 {
 public:
 	expense() {};
-	expense(std::string, std::string, std::string, double, double, int = 0);
+	expense(int,std::string, std::string, std::string, double, double, int = 0);
 	~expense() {};
 public:
 	std::string date;						// format 'YYYY-MM-DD'
@@ -55,6 +62,7 @@ public:
 	double amount;
 	double balance;
 	int id; 
+	int userID;
 private:
 
 };

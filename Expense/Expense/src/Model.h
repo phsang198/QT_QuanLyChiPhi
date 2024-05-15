@@ -5,6 +5,9 @@
 #include <memory>
 #include <sqlite3.h>
 
+// Class: CModel
+// Description: [Working with database.].
+
 class object;
 class user; 
 class expense;
@@ -17,11 +20,11 @@ public:
 public:
 	static sqlite3* db;
 public:
-	bool add(std::shared_ptr<object> ) ;
-	bool update(std::shared_ptr<object>) ;
+	bool add(std::shared_ptr<object>, std::string&) ;
+	bool update(std::shared_ptr<object>, std::string& ) ;
 	bool del(object);
 public:
-	bool getUser(user&);
-	bool getlistExpense(std::vector<std::shared_ptr<expense>>&);
+	bool getUser(std::string,user&);
+	bool getlistExpense(std::vector<std::shared_ptr<expense>>&, user);
 
 };

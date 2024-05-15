@@ -8,7 +8,7 @@ std::map<std::string, std::vector<std::string>> ObjectManager::lst_category;
 std::vector<std::shared_ptr<expense>> ObjectManager::lst_expense;
 user ObjectManager::_user;
 
-ObjectManager::ObjectManager()
+void ObjectManager::init()
 {
 	std::string content = "";
 	std::string path = StringProcess::getExePath() + "Res/config/category.conf";

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>ExpenseManager</class>
+ <widget class="QWidget" name="ExpenseManager">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>ExpenseManager</string>
   </property>
   <widget class="QTabWidget" name="tabwidget">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-30</y>
+     <y>-24</y>
      <width>1031</width>
      <height>791</height>
     </rect>
@@ -41,6 +41,18 @@
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+     </property>
      <property name="inputMethodHints">
       <set>Qt::ImhNone</set>
      </property>
@@ -57,6 +69,24 @@
        <height>28</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+     </property>
      <property name="text">
       <string>LOGIN</string>
      </property>
@@ -69,6 +99,18 @@
        <width>221</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="inputMethodHints">
       <set>Qt::ImhHiddenText</set>
@@ -155,6 +197,10 @@ color:rgb(255, 0, 0)</string>
        <height>741</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:0.886364, y2:0.125, stop:0.0625 rgba(174, 133, 147, 255), stop:1 rgba(255, 255, 255, 255))
+</string>
+     </property>
      <property name="title">
       <string/>
      </property>
@@ -166,6 +212,24 @@ color:rgb(255, 0, 0)</string>
         <width>151</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
       </property>
       <property name="text">
        <string>YOU HAVE NO ACCOUNT ?</string>
@@ -179,6 +243,24 @@ color:rgb(255, 0, 0)</string>
         <width>121</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
       </property>
       <property name="text">
        <string>FORGET PASSWORD?</string>
@@ -206,6 +288,18 @@ color:rgb(255, 0, 0)</string>
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+     </property>
      <property name="placeholderText">
       <string>USERNAME</string>
      </property>
@@ -218,6 +312,18 @@ color:rgb(255, 0, 0)</string>
        <width>221</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="placeholderText">
       <string>NEW PASSWORD</string>
@@ -232,6 +338,24 @@ color:rgb(255, 0, 0)</string>
        <height>28</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+     </property>
      <property name="text">
       <string>CHANGE</string>
      </property>
@@ -244,6 +368,18 @@ color:rgb(255, 0, 0)</string>
        <width>221</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="placeholderText">
       <string>CONFIRM NEW PASSWORD</string>
@@ -352,6 +488,10 @@ color:rgb(255, 0, 0)</string>
        <height>741</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:0.886364, y2:0.125, stop:0.0625 rgba(174, 133, 147, 255), stop:1 rgba(255, 255, 255, 255))
+</string>
+     </property>
      <property name="title">
       <string/>
      </property>
@@ -379,6 +519,18 @@ color:rgb(255, 0, 0)</string>
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+     </property>
      <property name="placeholderText">
       <string>PASSWORD</string>
      </property>
@@ -391,6 +543,24 @@ color:rgb(255, 0, 0)</string>
        <width>93</width>
        <height>28</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
      </property>
      <property name="text">
       <string>REGISTER</string>
@@ -413,6 +583,19 @@ color:rgb(255, 0, 0)</string>
      </property>
      <property name="layoutDirection">
       <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QComboBox {
+    color: rgb(185, 35, 250);
+	background-color:rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QComboBox:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="inputMethodHints">
       <set>Qt::ImhNoEditMenu</set>
@@ -447,6 +630,18 @@ color:rgb(255, 0, 0)</string>
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+     </property>
      <property name="placeholderText">
       <string>USERNAME</string>
      </property>
@@ -459,6 +654,18 @@ color:rgb(255, 0, 0)</string>
        <width>221</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="placeholderText">
       <string>CONFIRM PASSWORD</string>
@@ -491,6 +698,18 @@ color:rgb(255, 0, 0)</string>
        <width>221</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="placeholderText">
       <string>FULLNAME</string>
@@ -630,6 +849,10 @@ color:rgb(255, 0, 0)</string>
        <height>741</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:0.886364, y2:0.125, stop:0.0625 rgba(174, 133, 147, 255), stop:1 rgba(255, 255, 255, 255))
+</string>
+     </property>
      <property name="title">
       <string/>
      </property>
@@ -661,6 +884,18 @@ color:rgb(255, 0, 0)</string>
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+     </property>
      <property name="placeholderText">
       <string>USERNAME</string>
      </property>
@@ -682,6 +917,19 @@ color:rgb(255, 0, 0)</string>
      </property>
      <property name="layoutDirection">
       <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QComboBox {
+    color: rgb(185, 35, 250);
+	background-color:rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QComboBox:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="inputMethodHints">
       <set>Qt::ImhNoEditMenu</set>
@@ -724,6 +972,24 @@ color:rgb(255, 0, 0)</string>
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+     </property>
      <property name="text">
       <string>UPDATE</string>
      </property>
@@ -736,6 +1002,18 @@ color:rgb(255, 0, 0)</string>
        <width>221</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
      </property>
      <property name="placeholderText">
       <string>FULLNAME</string>
@@ -750,6 +1028,24 @@ color:rgb(255, 0, 0)</string>
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+     </property>
      <property name="text">
       <string>LOG OUT</string>
      </property>
@@ -762,6 +1058,10 @@ color:rgb(255, 0, 0)</string>
        <width>1001</width>
        <height>741</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:0.886364, y2:0.125, stop:0.0625 rgba(174, 133, 147, 255), stop:1 rgba(255, 255, 255, 255))
+</string>
      </property>
      <property name="title">
       <string/>
@@ -804,6 +1104,24 @@ p, li { white-space: pre-wrap; }
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+     </property>
      <property name="text">
       <string>About me</string>
      </property>
@@ -816,6 +1134,10 @@ p, li { white-space: pre-wrap; }
        <width>1001</width>
        <height>741</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:0.886364, y2:0.125, stop:0.0625 rgba(174, 133, 147, 255), stop:1 rgba(255, 255, 255, 255))
+</string>
      </property>
      <property name="title">
       <string/>
@@ -887,6 +1209,19 @@ p, li { white-space: pre-wrap; }
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QComboBox {
+    color: rgb(185, 35, 250);
+	background-color:rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QComboBox:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+      </property>
       <property name="inputMethodHints">
        <set>Qt::ImhNoEditMenu</set>
       </property>
@@ -945,6 +1280,19 @@ p, li { white-space: pre-wrap; }
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QComboBox {
+    color: rgb(185, 35, 250);
+	background-color:rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QComboBox:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+      </property>
       <property name="inputMethodHints">
        <set>Qt::ImhNoEditMenu</set>
       </property>
@@ -957,6 +1305,18 @@ p, li { white-space: pre-wrap; }
         <width>150</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
       </property>
       <property name="inputMethodHints">
        <set>Qt::ImhDate</set>
@@ -973,6 +1333,18 @@ p, li { white-space: pre-wrap; }
         <width>150</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
       </property>
       <property name="inputMethodHints">
        <set>Qt::ImhDigitsOnly</set>
@@ -1026,6 +1398,24 @@ p, li { white-space: pre-wrap; }
         <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+      </property>
       <property name="text">
        <string>ADD</string>
       </property>
@@ -1038,6 +1428,18 @@ p, li { white-space: pre-wrap; }
         <width>150</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
       </property>
       <property name="inputMethodHints">
        <set>Qt::ImhDigitsOnly</set>
@@ -1086,6 +1488,18 @@ p, li { white-space: pre-wrap; }
         <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+      </property>
       <property name="inputMethodHints">
        <set>Qt::ImhDate</set>
       </property>
@@ -1101,6 +1515,18 @@ p, li { white-space: pre-wrap; }
         <width>150</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
       </property>
       <property name="inputMethodHints">
        <set>Qt::ImhDate</set>
@@ -1145,7 +1571,7 @@ p, li { white-space: pre-wrap; }
        <string>Filter</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="balancetxt_2">
+     <widget class="QLineEdit" name="filtertxt">
       <property name="geometry">
        <rect>
         <x>570</x>
@@ -1153,6 +1579,18 @@ p, li { white-space: pre-wrap; }
         <width>150</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color:  rgb(157, 255, 226);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
       </property>
       <property name="inputMethodHints">
        <set>Qt::ImhNone</set>
@@ -1169,6 +1607,24 @@ p, li { white-space: pre-wrap; }
         <width>100</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
       </property>
       <property name="text">
        <string>SEARCH</string>
@@ -1191,6 +1647,24 @@ p, li { white-space: pre-wrap; }
         <pointsize>7</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+      </property>
       <property name="text">
        <string>CLEAR</string>
       </property>
@@ -1205,6 +1679,24 @@ p, li { white-space: pre-wrap; }
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+     </property>
      <property name="text">
       <string>EXPORT</string>
      </property>
@@ -1218,10 +1710,46 @@ p, li { white-space: pre-wrap; }
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(157, 255, 226);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+     </property>
      <property name="text">
       <string>About me</string>
      </property>
     </widget>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1031</width>
+       <height>751</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.989, x2:0.886364, y2:0.125, stop:0.0625 rgba(174, 133, 147, 255), stop:1 rgba(255, 255, 255, 255))
+</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+    </widget>
+    <zorder>groupBox_8</zorder>
     <zorder>groupBox</zorder>
     <zorder>tableView</zorder>
     <zorder>groupBox_2</zorder>

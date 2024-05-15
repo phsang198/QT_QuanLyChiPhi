@@ -15,6 +15,9 @@
 #include <chrono>
 
 #define RUN_PROJECT "Expense.exe"
+// Class: StringProcess
+// Description: [To be used to support for orther function].
+
 class StringProcess
 {
 public:
@@ -26,7 +29,7 @@ public:
 	template <class T> 
 	static bool compare(const std::shared_ptr<T>& e1, const std::shared_ptr<T>& e2) {
 		if (e1->date != e2->date) {
-			return compareDates(e1->date, e2->date);
+			return compareDates2(e1->date, e2->date);
 		}
 		else if (e1->category != e2->category)
 		{
@@ -37,9 +40,27 @@ public:
 		}
 	}
 	template <class T> 
-	static void Sort( std::vector<std::shared_ptr<T>> arr)
+	static void Sort( std::vector<std::shared_ptr<T>>& arr)
 	{
 		std::sort(arr.begin(), arr.end(), compare<T>);
+	}
+	static int compareDates2(const std::string& date1, const std::string& date2) {
+		std::tm tm1 = {};
+		std::tm tm2 = {};
+
+		std::istringstream iss1(date1);
+		std::istringstream iss2(date2);
+
+		iss1 >> std::get_time(&tm1, "%Y-%m-%d");
+		iss2 >> std::get_time(&tm2, "%Y-%m-%d");
+
+		auto time_point1 = std::chrono::system_clock::from_time_t(std::mktime(&tm1));
+		auto time_point2 = std::chrono::system_clock::from_time_t(std::mktime(&tm2));
+
+		if (time_point1 <= time_point2)
+			return 1;
+		else
+			return 0;
 	}
 	static int compareDates(const std::string& date1, const std::string& date2) {
 		std::tm tm1 = {};
@@ -114,6 +135,14 @@ public:
 		
 		return true;
 	}
+
+	static bool Exist(std::string& str, const std::string& key) {
+		size_t start_pos = str.find(key);
+		if (start_pos == std::string::npos)
+			return false;
+		return true;
+	}
+
 	static bool Replace(std::string& str, const std::string& from, const std::string& to) {
 		size_t start_pos = str.find(from);
 		if (start_pos == std::string::npos)
@@ -189,8 +218,11 @@ public:
 	}
 	static int existSubStr(std::string str, std::string substr)
 	{
-		int position = static_cast<int>(str.find(substr));
-		return position; 
+		size_t position = str.find(substr);
+		if (position != std::string::npos)
+			return static_cast<int>(position);
+		else
+			return -1;
 	}
 	static std::string to_string_with_precision(double a_value, const int n = 15)
 	{

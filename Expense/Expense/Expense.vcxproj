@@ -37,12 +37,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.7.0_msvc2019_64</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;widgets;charts</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>6.7.0_msvc2019_64</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;widgets;charts</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -121,6 +121,7 @@ xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Aboutme.cpp" />
+    <ClCompile Include="Admin.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Register.cpp" />
@@ -135,6 +136,8 @@ xcopy $(SolutionDir)Lib\sqlite3\share\ $(SolutionDir)$(Platform)\$(Configuration
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="ExpenseTable.h" />
+    <ClInclude Include="ExpenseChart.h" />
     <ClInclude Include="src\Control.h" />
     <ClInclude Include="src\Model.h" />
     <ClInclude Include="src\object.h" />
